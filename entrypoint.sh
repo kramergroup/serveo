@@ -19,7 +19,7 @@ fi
 echo "${PUBLIC_DOMAIN}:80:${TARGET_HOST}:${TARGET_PORT}"
 
 if [ -z "${PUBLIC_DOMAIN}" ]; then
-  ssh -R 80:${TARGET_HOST}:${TARGET_PORT} serveo.net
+  ssh -o "StrictHostKeyChecking no" -R 80:${TARGET_HOST}:${TARGET_PORT} serveo.net
 else 
-    ssh -R ${PUBLIC_DOMAIN}:80:${TARGET_HOST}:${TARGET_PORT} serveo.net
+    ssh -o "StrictHostKeyChecking no" -R  ${PUBLIC_DOMAIN}:80:${TARGET_HOST}:${TARGET_PORT} serveo.net
 fi
