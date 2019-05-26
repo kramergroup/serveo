@@ -12,7 +12,7 @@ fi
 
 if [ -z "${TARGET_PORT}" ];
 then
-  echo "No target port defined.
+  echo "No target port defined."
   exit -1
 fi
 
